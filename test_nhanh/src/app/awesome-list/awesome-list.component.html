@@ -1,0 +1,20 @@
+<button routerLink="create">Add New</button>
+<table border="1px">
+  <tr>
+    <td>Id</td>
+    <td>Tag</td>
+    <td>Url</td>
+    <td>Descriptions</td>
+    <td colspan="2">Action</td>
+
+  </tr>
+  <tr *ngFor="let awesome of awesomes; let i = index">
+    <td>{{awesome.id}}</td>
+    <td>{{awesome.tag}}</td>
+    <td>{{awesome.url}}</td>
+    <td>{{awesome.descriptions}}</td>
+    <td><button (click)="delete(awesome.id)" >Delete</button></td>
+    <td><button routerLink="{{awesome.id}}/update" >Update</button></td>
+  </tr>
+
+</table>

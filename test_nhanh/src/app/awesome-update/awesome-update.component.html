@@ -1,0 +1,21 @@
+<h1>Update Awesome</h1>
+<form *ngIf="formUpdate" [formGroup]="formUpdate" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>Tag:</td>
+      <td><input type="text" size="60" formControlName="tag"></td>
+    </tr>
+    <tr>
+      <td>Url:</td>
+      <td><input type="text" size="60" formControlName="url"></td>
+    </tr>
+    <tr>
+      <td>Description:</td>
+      <td><input type="text" size="60" formControlName="descriptions"></td>
+    </tr>
+    <tr>
+      <td><button type="submit" >Update</button>
+        <button routerLink="" >Back</button></td>
+    </tr>
+  </table>
+</form>
